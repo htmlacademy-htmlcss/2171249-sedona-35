@@ -7,14 +7,14 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="header">
     <nav class="navigation">
-      <a class="navigation-logo" href="index.html">
-        <img class="page-header-logo" src="#" width="140" height="70" alt="Логотип Седоны">
+      <a class="navigation-logo">
+        <img src="#" width="140" height="70" alt="Логотип Седоны">
       </a>
       <ul class="navigation-list list-reset">
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
+          <a class="navigation-link navigation-link-current">Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="about.html">О Седоне</a>
@@ -24,25 +24,25 @@
         </li>
       </ul>
       <ul class="navigation-list navigation-user list-reset">
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">
+        <li class="navigation-user-item">
+          <a class="navigation-user-link" href="#">
             <span class="visually-hidden">
       Поиск
     </span>
           </a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">
+        <li class="navigation-user-item">
+          <a class="navigation-user-link" href="#">
             <span class="visually-hidden">
     Избранное
   </span>
           </a>
         </li>
       </ul>
-      <a class="navigation-link button brown-button" href="#">Хочу сюда</a>
+      <a class="navigation-button button brown-button" href="#">Хочу сюда</a>
     </nav>
   </header>
-  <main class="main-index">
+  <main class="main">
 
     <section class="greeting">
       <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
@@ -57,8 +57,8 @@
 
     <section class="reasons">
       <h2 class="visually-hidden">Причины</h2>
-      <ul class="reasons-list">
-        <li class="reasons-item">
+      <ul class="reasons-list list-reset">
+        <li class="reasons-item reasons-item-full">
           <div class="reasons-image">
             <img src="#" width="800" height="384" alt="Вид Седоны">
           </div>
@@ -85,7 +85,7 @@
             <p class="reasons-description">Большинство едет в Гранд Каньон и толпится там</p>
           </div>
         </li>
-        <li class="reasons-item">
+        <li class="reasons-item reasons-item-full">
           <div class="reasons-image">
             <img src="#" width="800" height="384" alt="Вид на мост Дьявола">
           </div>
@@ -95,87 +95,71 @@
           </div>
         </li>
       </ul>
-    </section>
 
-    <section class="other-reasons">
       <h2 class="visually-hidden">Другие причины</h2>
-      <ul class="reasons-list">
+      <ul class="reasons-list list-reset">
         <li class="reasons-item">
-          <div class="reasons-content">
+          <div class="reasons-content reasons-content-motel">
             <h3 class="reasons-title">Жильё</h3>
             <p class="reasons-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </div>
-          <div class="reasons-image">
-            <img src="#" width="75" height="72" alt="Пиктограмма дом">
-          </div>
         </li>
         <li class="reasons-item">
-          <div class="reasons-content">
+          <div class="reasons-content reasons-content-food">
             <h3 class="reasons-title">Еда</h3>
             <p class="reasons-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </div>
-          <div class="reasons-image">
-            <img src="#" width="74" height="70" alt="Пиктограмма бургер">
-          </div>
-        </li>
+         </li>
         <li class="reasons-item">
-          <div class="reasons-content">
+          <div class="reasons-content reasons-content-souvenirs">
             <h3 class="reasons-title">Сувениры</h3>
             <p class="reasons-description">Не только китайского, но и настоящего местного производства!</p>
           </div>
-          <div class="reasons-image">
-            <img src="#" width="64" height="76" alt="Пиктограмма подарок">
-          </div>
-        </li>
+          </li>
       </ul>
     </section>
 
-    <section>
+    <section class="search">
       <h2 class="search-title">Заинтересовались?</h2>
       <p class="search-description">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <a class="search-link" href="#">Поиск гостиницы в Седоне</a>
+      <a class="button search-button brown-button" href="#">Поиск гостиницы в Седоне</a>
     </section>
-    <section class="newsletter">
+    <section class="newsletter newsletter-home">
       <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-      <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <p class="newsletter-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
       <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label for="newsletter-email">Email</label>
-        <input class="field" placeholder="email@example.com" type="email" name="newsletter-email" id="newsletter-email" required>
-        <button class="button newsletter-button" type="submit">Подписаться</button>
+        <label class="visually-hidden"  for="email">Ваш email</label>
+        <input class="newsletter-input form-input" type="email" name="email" id="email" placeholder="Ваш e-mail" required>
+        <button class="button newsletter-button blue-button" type="submit">Подписаться</button>
       </form>
     </section>
   </main>
 
-  <footer class="page-footer">
+  <footer class="footer">
     <h2 class="visually-hidden">Соцсети</h2>
     <ul class="footer-social-list list-reset">
       <li class="footer-social-item">
-        <a class="button" href="https://vk.com/htmlacademy">
+        <a class="footer-social-link" href="https://vk.com/htmlacademy">
           <span class="visually-hidden">Вконтакте</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class="button" href="https://t.me/htmlacademy">
+        <a class="footer-social-link" href="https://t.me/htmlacademy">
           <span class="visually-hidden">Телеграм</span>
         </a>
       </li>
       <li class="footer-social-item">
-        <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+        <a class="footer-social-link" href="https://www.youtube.com/user/htmlacademyru">
           <span class="visually-hidden">Ютуб</span>
         </a>
       </li>
     </ul>
-    <h2 class="visually-hidden">Телефон</h2>
-    <address class="footer-contacts-address">
-          <a class="footer-contacts-adress-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        </address>
-    <h2 class="visually-hidden">Логотип академии</h2>
-    <a href="https://htmlacademy.ru">
+    <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+    <a class="footer-logo" href="https://htmlacademy.ru">
       <img src="#" width="115" height="33" alt="Логотип Академии.">
     </a>
   </footer>
 
-  <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
 
 </body>
 

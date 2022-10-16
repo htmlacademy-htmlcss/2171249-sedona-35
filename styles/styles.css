@@ -14,6 +14,12 @@
 	font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
 	background-color: #F2F2F2;
   box-sizing: border-box;
@@ -30,7 +36,38 @@ body {
 	background-color: #ffffff;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 	width: 1200px;
+	margin: 0 auto;
 }
+
+img {
+	max-width: 100%;
+
+	object-fit: cover;
+	object-position: center;
+  }
+
+  .visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+
+	white-space: nowrap;
+
+	border: 0;
+
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+  }
+
+  .list-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
 
 .button {
 	display: inline-block;
@@ -244,7 +281,6 @@ body {
 	color: #ffffff;
 	text-decoration: none;
 	text-align: center;
-	text-transform: uppercase;
 }
 
 .pagination-current {
@@ -253,6 +289,12 @@ body {
 
 .pagination-link-more {
 	color: #000000;
+}
+
+.newsletter {
+background-image: url("../images/subscribe-background.jpg");
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 .newsletter-title {
@@ -267,10 +309,21 @@ body {
 }
 
 .form-input {
-	font-family: "PT Sans", sans-serif;
+	width: 100%;
+	height: 48px;
+	padding: 13px 56px 10px 17px;
+
+	font-weight: 700;
 	font-size: 18px;
 	line-height: 24px;
+	font-family: "PT Sans", sans-serif;
 	color: #000000;
+
+	background-color: #f2f2f2;
+	border: 2px solid transparent;
+	border-radius: 4px;
+
+	appearance: none;
 }
 
 .form-input::placeholder {
@@ -281,34 +334,4 @@ body {
 	width: 232px;
 	font-size: 20px;
 	line-height: 36px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-
-  object-fit: cover;
-  object-position: center;
-}
-
-.visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-
-  white-space: nowrap;
-
-  border: 0;
-
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
 }

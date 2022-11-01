@@ -106,12 +106,32 @@ img {
   cursor: pointer;
 }
 
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background-color: #e5e5e5;
+}
+
 .button-blue {
   background-color: #82b3d3;
 }
 
 .button-transparent {
   background-color: transparent;
+}
+
+.button-transparent:hover {
+  opacity: 0.6;
+}
+
+.button-transparent:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.button-transparent:disabled {
+  opacity: 0.1;
 }
 
 .form-input {
@@ -166,6 +186,8 @@ img {
 }
 
 .navigation-link {
+  position: relative;
+
   display: block;
   padding: 20px 16px;
 
@@ -176,12 +198,56 @@ img {
   text-decoration: none;
 }
 
+.navigation-link-current::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 2px;
+
+  background-color: #756257;
+}
+
 .navigation-user-link {
   display: block;
   min-width: 44px;
   min-height: 64px;
+}
 
-  background-color: #333333;
+.navigation-user-link-favorites {
+  position: relative;
+
+  text-decoration: none;
+}
+
+.navigation-user-link-favorites-num {
+  position: absolute;
+
+  margin-top: 15px;
+  margin-left: 20px;
+  padding: 4px;
+
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+
+  background-color: #7db54f;
+  border-radius: 50%;
+}
+
+.navigation-user-link-search {
+  background-image: url("../images/svg/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation-user-link-favorites {
+  background-image: url("../images/svg/icons-heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .navigation-button {
@@ -244,6 +310,24 @@ img {
   padding: 103px 85px 121px;
 
   background-color: rgba(131, 179, 211, 0.2);
+}
+
+.reasons-content-motel {
+  background-image: url("../images/svg/reason-home.svg");
+  background-repeat: no-repeat;
+  background-position: top 80px right 162px;
+}
+
+.reasons-content-food {
+  background-image: url("../images/svg/reason-food.svg");
+  background-repeat: no-repeat;
+  background-position: top 80px right 162px;
+}
+
+.reasons-content-souvenirs {
+  background-image: url("../images/svg/reason-gift.svg");
+  background-repeat: no-repeat;
+  background-position: top 80px right 162px;
 }
 
 .reasons-item:nth-child(2n) .reasons-content {
@@ -370,7 +454,7 @@ img {
 }
 
 .newsletter-home {
-  background-image: url("../images/subscribe-background.jpg");
+  background-image: url("../images/mailing-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -446,8 +530,41 @@ img {
   align-items: center;
   width: 48px;
   height: 40px;
+}
 
-  background-color: #82b3d3;
+.social-icon {
+  color: #83b3d3;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  color: #68a2ca;
+}
+
+.social-icon:active {
+  color: rgba(104, 162, 202, 0.3);
+}
+
+.footer-phone:hover,
+.footer-phone:focus {
+  color: #756157;
+}
+
+.footer-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.academy-icon {
+  color: #000000;
+}
+
+.academy-icon:hover,
+.academy-icon:focus {
+  color: #756157;
+}
+
+.academy-icon:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 /* Footer-logo */
@@ -511,6 +628,8 @@ img {
   line-height: 21px;
   color: #ffffff;
   text-decoration: none;
+
+  cursor: pointer;
 }
 
 .breadcrumbs-link-home {
@@ -521,6 +640,18 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 13px 15px;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
+  color: #ffffff;
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .catalog-filter {
@@ -575,6 +706,67 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.range-scale {
+  position: relative;
+
+  height: 4px;
+
+  background-color: #ffffff;
+}
+
+.range-bar {
+  position: absolute;
+
+  height: 4px;
+
+  background-color: tomato;
+}
+
+.range-toggle {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:focus {
+  border: 3px solid #83b3d3;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  border: 2px solid #83b3d3;
+  border-radius: 5px;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  margin: 0;
+
+  appearance: none;
+}
+
+.range-input {
+  width: 143px;
+}
+
 .catalog-filter-buttons {
   display: flex;
   flex-direction: column;
@@ -608,7 +800,7 @@ img {
 .sorting-select {
   width: 292px;
   height: 49px;
-  padding: 14px 20px;
+  padding: 12px 20px;
 
   font-size: 18px;
   line-height: 21px;
@@ -627,6 +819,36 @@ img {
   height: 48px;
 
   border: 2px solid #e5e5e5;
+}
+
+.sorting-item:hover {
+  outline: 2px solid #000000;
+}
+
+.sorting-item:focus {
+  outline: 2px solid #68a2ca;
+}
+
+.sorting-item:active {
+  outline: 2px solid #000000;
+}
+
+.sorting-item-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sorting-item-slideshow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sorting-item-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hotels-list {
@@ -691,7 +913,7 @@ img {
 }
 
 .hotels-rating-text {
-  padding: 9px 22px;
+  padding: 9px;
 
   font-size: 16px;
   line-height: 20px;
@@ -700,6 +922,27 @@ img {
   text-transform: uppercase;
 
   background-color: #f2f2f2;
+}
+
+.hotels-star {
+  width: 140px;
+  height: 36px;
+
+  background-image: url("../images/stars.png");
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.hotels-star-4 {
+  width: 90px;
+}
+
+.hotels-star-3 {
+  width: 66px;
+}
+
+.hotels-star-2 {
+  width: 42px;
 }
 
 .pagination {
@@ -742,4 +985,18 @@ img {
 
   background-color: transparent;
   border-color: transparent;
+}
+
+.pagination-link:not(.pagination-link-current, .pagination-link-more):hover {
+  background-color: #68a2ca;
+  outline: 1px solid #82b3d3;
+}
+
+.pagination-link:not(.pagination-link-current, .pagination-link-more) :focus {
+  background-color: #68a2ca;
+  outline: 1px solid #82b3d3;
+}
+
+.pagination-link:not(.pagination-link-current, .pagination-link-more) :active {
+  color: rgba(255, 255, 255, 0.3);
 }

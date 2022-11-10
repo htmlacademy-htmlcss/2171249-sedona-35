@@ -106,6 +106,11 @@ img {
   cursor: pointer;
 }
 
+.button:hover,
+.button:focus {
+  background-color: #615048;
+}
+
 .button:active {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -114,16 +119,9 @@ img {
   background-color: #82b3d3;
 }
 
-.button-blue:hover {
+.button-blue:hover,
+.button-blue:focus {
   background-color: #68a2ca;
-}
-
-.button-green:hover {
-  background-color: #6c9e42;
-}
-
-.hotels-button-more:hover {
-  background-color: #615048;
 }
 
 .button-transparent {
@@ -131,24 +129,30 @@ img {
 }
 
 .button-transparent:hover {
+  background-color: transparent;
   opacity: 0.6;
 }
 
 .button-transparent:focus {
+  background-color: transparent;
   outline: 3px solid #83b3d3;
 }
 
 .button-transparent:active {
-  color: rgba(0, 0, 0, 0.25);
+  background-color: transparent;
 }
 
 .button:disabled,
 .button-disabled {
+  color: #ffffff;
+
   background-color: #e5e5e5;
 }
 
 .button-transparent:disabled {
-  opacity: 0.1;
+  color: rgba(255, 255, 255, 0.1);
+
+  background-color: transparent;
 }
 
 .form-input {
@@ -307,14 +311,6 @@ img {
 
 .navigation-button {
   width: 160px;
-}
-
-.navigation-button:hover {
-  opacity: 0.8;
-}
-
-.navigation-button:focus {
-  outline: 2px solid #83b3d3;
 }
 
 /* Greeting */
@@ -504,14 +500,6 @@ img {
   line-height: 36px;
 }
 
-.search-button:hover {
-  opacity: 0.8;
-}
-
-.search-button:focus {
-  outline: 2px solid #83b3d3;
-}
-
 /* Newsletter */
 
 .newsletter {
@@ -627,15 +615,6 @@ img {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.footer-logo:hover,
-.footer-logo:focus {
-  color: #756157;
-}
-
-.footer-logo:active {
-  color: rgba(117, 97, 87, 0.3);
-}
-
 /* Footer-logo */
 
 .footer-logo {
@@ -644,6 +623,15 @@ img {
   height: 33px;
 
   color: #000000;
+}
+
+.footer-logo:hover,
+.footer-logo:focus {
+  color: #756157;
+}
+
+.footer-logo:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .filter {
@@ -720,7 +708,7 @@ img {
 }
 
 .breadcrumbs-link:focus {
-  color: #ffffff;
+  outline: 3px solid #83b3d3;
 }
 
 .breadcrumbs-link:active {
@@ -1069,6 +1057,10 @@ img {
   border: 2px solid #000000;
 }
 
+.sorting-item-active {
+  border: 2px solid #000000;
+}
+
 .hotels-list {
   display: grid;
   padding-bottom: 38px;
@@ -1145,6 +1137,11 @@ img {
 
 .hotels-favorites-active {
   background-color: #7db54f;
+}
+
+.hotels-favorites-active:hover,
+.hotels-favorites-active:focus {
+  background-color: #6c9e42;
 }
 
 .hotels-rating-text {
@@ -1234,6 +1231,8 @@ img {
 
 .pagination-link[href]:active {
   color: rgba(255, 255, 255, 0.3);
+
+  background-color: #82b3d3;
 }
 
 .modal-container {
@@ -1275,12 +1274,30 @@ img {
   padding: 0;
 
   background-color: #f2f2f2;
-  background-image: url("../images/svg/icons-cross.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
   border-radius: 50px;
   cursor: pointer;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 17px;
+  height: 2px;
+
+  background-color: #000000;
+}
+
+.modal-close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .modal-close-button:hover {
@@ -1288,6 +1305,7 @@ img {
 }
 
 .modal-close-button:focus {
+  background-color: #e6e6e6;
   outline: 3px solid #83b3d3;
 }
 
@@ -1296,6 +1314,11 @@ img {
   border: 1px solid #000000;
   outline: none;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close-button:active::before,
+.modal-close-button:active::after {
+  opacity: 0.3;
 }
 
 .modal-title {
@@ -1336,12 +1359,6 @@ img {
   color: #ff5757;
 }
 
-.form-info-desc {
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-}
-
 .form-input:hover {
   background-color: #e6e6e6;
 }
@@ -1352,6 +1369,7 @@ img {
 }
 
 .form-input:active {
+  background-color: #f2f2f2;
   border: 2px solid #000000;
   outline: none;
 }
@@ -1439,7 +1457,7 @@ img {
 
 .form-btn:active::before,
 .form-btn:active::after {
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .form-btn:focus {
@@ -1478,7 +1496,7 @@ img {
 .form-info-desc {
   position: absolute;
   top: 100%;
-  left: 27%;
+  left: 50%;
   z-index: 2;
 
   display: none;
@@ -1486,6 +1504,8 @@ img {
   margin: 5px 0 0;
   padding: 20px 20px 23px;
 
+  font-size: 16px;
+  line-height: 20px;
   color: #ffffff;
 
   background-color: #333333;
@@ -1523,16 +1543,4 @@ img {
   line-height: 24px;
 
   border-radius: 10px;
-}
-
-.form-submit:hover {
-  background: #68a2ca;
-}
-
-.form-submit:focus {
-  outline: 3px solid #83b3d3;
-}
-
-.form-submit:active {
-  color: rgba(255, 255, 255, 0.3);
 }

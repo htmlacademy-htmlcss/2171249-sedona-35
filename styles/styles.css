@@ -135,7 +135,6 @@ img {
 
 .button-transparent:focus {
   background-color: transparent;
-  outline: 3px solid #83b3d3;
 }
 
 .button-transparent:active {
@@ -177,6 +176,10 @@ img {
   opacity: 0.6;
 }
 
+.newsletter-input {
+  font-weight: 400;
+}
+
 /* Navigation */
 
 .navigation {
@@ -189,6 +192,7 @@ img {
   z-index: 1;
 
   display: block;
+  align-self: start;
   width: 140px;
   height: 70px;
   margin-right: 30px;
@@ -200,7 +204,6 @@ img {
 }
 
 .navigation-logo:focus {
-  outline: 2px solid #83b3d3;
   opacity: 0.8;
 }
 
@@ -237,7 +240,6 @@ img {
 }
 
 .navigation-link:focus {
-  outline: 2px solid #83b3d3;
   opacity: 0.8;
 }
 
@@ -271,7 +273,6 @@ img {
 }
 
 .navigation-user-link:focus {
-  outline: 2px solid #83b3d3;
   opacity: 0.8;
 }
 
@@ -707,10 +708,6 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-link:focus {
-  outline: 3px solid #83b3d3;
-}
-
 .breadcrumbs-link:active {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -767,10 +764,6 @@ img {
 .filter-control-input:hover,
 .filter-control-input:hover + .filter-control-label {
   opacity: 0.6;
-}
-
-.filter-control-input:focus {
-  outline: 3px solid #83b3d3;
 }
 
 .filter-control-input:active,
@@ -865,7 +858,6 @@ img {
 
 .filter-range-input:focus {
   background-color: #e6e6e6;
-  outline: 3px solid #83b3d3;
 }
 
 .filter-range-input:active {
@@ -946,7 +938,6 @@ img {
 }
 
 .filter-toggle-item:focus {
-  outline: 3px solid #83b3d3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -1015,10 +1006,6 @@ img {
   border: 2px solid #68a2ca;
 }
 
-.sorting-select:focus {
-  border: 2px solid #68a2ca;
-}
-
 .sorting-select:active {
   border: 2px solid #3f5e72;
 }
@@ -1047,10 +1034,6 @@ img {
 
 .sorting-item:hover {
   border: 2px solid #000000;
-}
-
-.sorting-item:focus {
-  border: 2px solid #68a2ca;
 }
 
 .sorting-item:active {
@@ -1101,7 +1084,6 @@ img {
 }
 
 .hotels-img:focus {
-  outline: 2px solid #83b3d3;
   opacity: 0.8;
 }
 
@@ -1226,7 +1208,6 @@ img {
 
 .pagination-link[href]:focus {
   background-color: #68a2ca;
-  outline: none;
 }
 
 .pagination-link[href]:active {
@@ -1306,7 +1287,6 @@ img {
 
 .modal-close-button:focus {
   background-color: #e6e6e6;
-  outline: 3px solid #83b3d3;
 }
 
 .modal-close-button:active {
@@ -1365,7 +1345,6 @@ img {
 
 .form-input:focus {
   background-color: #e6e6e6;
-  outline: 3px solid #83b3d3;
 }
 
 .form-input:active {
@@ -1462,7 +1441,6 @@ img {
 
 .form-btn:focus {
   border-radius: 4px;
-  outline: 3px solid #82b3d3;
 }
 
 .form-info-container {
